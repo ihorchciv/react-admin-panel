@@ -1,0 +1,10 @@
+.error a {
+  display: block;
+  color: #0b6bcb;
+  text-decoration: none;
+}
+
+.error h1,
+.error a {
+  text-align: left;
+}
