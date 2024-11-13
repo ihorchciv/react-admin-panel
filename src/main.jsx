@@ -1,11 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import { Form } from "./Pages/Form/form.jsx";
+import { Form } from "./Pages/Form/Form.jsx";
 import Users from "./Pages/Form/Users/Users.jsx";
 import { User } from "./Pages/Form/User/User.jsx";
-import { CreateUserModal } from "./components/CreateUserModal/CreateUserModal.jsx";
-import RemoveUserModal from "./components/RemoveUserModal/RemoveUserModal.jsx";
 import { ErrorPage } from "./Pages/ErrorPage/ErrorPage.jsx";
 import {
   createBrowserRouter,
