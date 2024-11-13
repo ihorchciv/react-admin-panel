@@ -1,6 +1,5 @@
 import "./Form.css";
 import Input from "@mui/joy/Input";
-import Button from "@mui/joy/Button";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectAllUsers } from "../../store/userSlice";
@@ -28,42 +27,52 @@ export function Form() {
     }
   };
 
+  const contentItems = {
+    title: "Welcome!",
+    slog: "Sign in to continue.",
+    name: "Name",
+    password: "Password",
+    email: "Email",
+  };
+
   return (
-    <div className="container">
-      <form>
-        <div className="inp-field">
-          <Input
-            color="primary"
-            variant="outlined"
-            placeholder="Name"
-            onChange={(e) => onChangeHandler(e.target.value, "name")}
-            value={user.name}
-          />
-        </div>
-        <div className="inp-field">
-          <Input
-            color="primary"
-            variant="outlined"
-            placeholder="Password"
-            onChange={(e) => onChangeHandler(e.target.value, "password")}
-            value={user.password}
-          />
-        </div>
-        <div className="inp-field">
-          <Input
-            color="primary"
-            variant="outlined"
-            placeholder="Email"
-            onChange={(e) => onChangeHandler(e.target.value, "email")}
-            value={user.email}
-          />
-        </div>
-        <div className="btn-submit">
-          <Button onClick={onLogin} variant="solid">
-            Submit
-          </Button>
-        </div>
-      </form>
+    <div className="main-container">
+      <div className="form-container">
+        <form>
+          <h3>{contentItems.title}</h3>
+          <p>{contentItems.slog}</p>
+          <p className="p-style">{contentItems.name}</p>
+          <div className="inp-field">
+            <Input
+              placeholder="name"
+              onChange={(e) => onChangeHandler(e.target.value, "name")}
+              value={user.name}
+            />
+          </div>
+          <p className="p-style">{contentItems.password}</p>
+          <div className="inp-field">
+            <Input
+              placeholder="password"
+              type="password"
+              onChange={(e) => onChangeHandler(e.target.value, "password")}
+              value={user.password}
+            />
+          </div>
+          <p className="p-style">{contentItems.email}</p>
+          <div className="inp-field">
+            <Input
+              placeholder="johndoe@email.com"
+              onChange={(e) => onChangeHandler(e.target.value, "email")}
+              value={user.email}
+            />
+          </div>
+          <div className="btn-submit">
+            <button className="submit-btn" onClick={onLogin}>
+              Log in
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
