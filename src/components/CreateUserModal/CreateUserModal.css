@@ -14,12 +14,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 1rem;
-  background-color: rgb(249, 250, 251);
+  padding: 2rem;
+  background-color: rgb(245, 241, 241);
   border-radius: 15px;
 }
 
-.modal i {
+.modal b {
   color: rgba(100, 100, 100);
   position: fixed;
   top: 10px;
@@ -27,18 +27,28 @@
   cursor: pointer;
 }
 
-.modal h1 {
+.modal h3 {
   text-align: center;
+  color: #185ea5;
 }
 
-.btns button {
+.modal p {
+  color: #185ea5;
+  margin: 8px 13px;
+}
+
+.modal-inp-field {
+  padding: 5px 0;
+}
+
+.btn-sub {
+  margin-top: 10px;
+}
+
+.modal-sub-btn {
   width: 100%;
-  margin: 0.3rem;
-  padding: 10px;
-  font-weight: 600;
-  border-radius: 6px;
-  border: 1px solid;
-  cursor: pointer;
+  height: 40px;
+  transition: background-color 0.3s ease;
 }
 
 .accept {
@@ -60,8 +70,4 @@
 
 .close {
   cursor: pointer;
-}
-
-.btn-sub button {
-  width: 100%;
 }
