@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./RemoveUserModal.css";
 import { removeUser, selectAllUsers } from "../../store/userSlice";
+import Button from "@mui/joy/Button";
 
 function RemoveUserModal({ setIsOpen, userId }) {
   const data = useSelector(selectAllUsers);
@@ -12,20 +13,26 @@ function RemoveUserModal({ setIsOpen, userId }) {
     setIsOpen(false);
   };
 
+  const remUser = "Remove User";
+
   return (
     <div className="modal">
       <div className="modal-content">
-        <i onClick={() => setIsOpen(false)} className="close">
+        <b onClick={() => setIsOpen(false)} className="close">
           X
-        </i>
-        <h1>Remove User</h1>
+        </b>
+        <h1>{remUser}</h1>
         <div className="btns">
-          <button onClick={onDeleteUser} className="accept">
+          <Button onClick={onDeleteUser} className="accept">
             Yes, remove
-          </button>
-          <button onClick={() => setIsOpen(false)} className="reject">
+          </Button>
+          <Button
+            color="danger"
+            onClick={() => setIsOpen(false)}
+            className="reject"
+          >
             Cancel
-          </button>
+          </Button>
         </div>
       </div>
     </div>
