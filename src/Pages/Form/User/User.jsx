@@ -71,9 +71,6 @@ export function User() {
         <button>
           <Link to="/users">View all users</Link>
         </button>
-        <button onClick={() => setIsOpenCreateUserModal(true)}>
-          Create a new User
-        </button>
       </div>
       {isOpenCreateUserModal && (
         <CreateUserModal setIsOpenCreateUserModal={setIsOpenCreateUserModal} />
