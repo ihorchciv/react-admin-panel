@@ -1,8 +1,12 @@
 {
-  "name": "admin-panel-app",
+  "name": "react-admin-panel",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "author": {
+    "name": "Ihor Chernyakhovskyy",
+    "email": "ihorchciv@gmail.com"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
