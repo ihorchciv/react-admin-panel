@@ -16,18 +16,12 @@
   border: 0.8px solid rgb(205, 215, 225);
   box-shadow: 1px 1px 2px rgb(255, 255, 255);
 }
-a {
-  text-decoration: none;
-}
 
 .nav-block button:hover {
   background-color: #185ea5;
   color: aliceblue;
 }
+
 .nav-block button:hover a {
   color: aliceblue;
-}
-
-tbody {
-  border-radius: 8px;
 }
