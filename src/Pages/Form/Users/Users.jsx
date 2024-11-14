@@ -59,6 +59,9 @@ const Users = () => {
         <button onClick={() => setIsOpenCreateUserModal(true)}>
           Create a new User
         </button>
+        <button>
+          <Link to={"/"}>Exit</Link>
+        </button>
       </div>
       {isOpen && <RemoveUserModal setIsOpen={setIsOpen} userId={userId} />}
       {isOpenCreateUserModal && (
