@@ -1,4 +1,4 @@
-# React + Vite
+[![LinkedIn][linkedin-shield]]("www.linkedin.com/in/ihor-chernyakhovskyy-9659b525a")
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
