@@ -43,7 +43,7 @@ const Users = () => {
               <td>
                 <Button
                   onClick={() => onDeleteUser(obj.id)}
-                  color="danger"
+                  color="primary"
                   disabled={false}
                   loading={false}
                   size="sm"
