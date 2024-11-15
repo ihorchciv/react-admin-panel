@@ -1,5 +1,6 @@
 {
   "name": "react-admin-panel",
+  "description": "React Admin Panel is a management tool that enables managing, adding, deleting, and modifying users!",
   "private": true,
   "version": "0.0.1",
   "type": "module",
