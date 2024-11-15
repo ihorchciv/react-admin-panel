@@ -60,8 +60,10 @@ export function User() {
               <td>{user.name}</td>
               <td>{user.password}</td>
               <td>{user.email}</td>
-              <td>
-                <button onClick={onEditMode}>Edit user</button>
+              <td class="flex-container">
+                <button className="btnStyle" onClick={onEditMode}>
+                  Edit user
+                </button>
               </td>
             </tr>
           )}
