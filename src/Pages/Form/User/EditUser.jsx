@@ -52,7 +52,7 @@ export function EditUser({
         />
       </td>
       <td className="btns-group">
-        <Button size="sm" color="success" onClick={onSaveChanges}>
+        <Button size="sm" color="primary" onClick={onSaveChanges}>
           Save
         </Button>
         <Button size="sm" color="danger" onClick={() => setIsEditMode(false)}>
