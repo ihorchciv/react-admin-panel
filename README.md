@@ -3,7 +3,7 @@
 <!-- PROJECT NAME -->
 
   <h3 align="center">react-admin-panel</h3>
-<br />
+  <br />
 
   <p align="center">
     React Admin Panel is a management tool that enables managing, adding, deleting, and modifying users!
@@ -11,7 +11,7 @@
     <br />
     <br />
 
-    ![My Project Screenshot](https://raw.githubusercontent.com/ihorchciv/react-admin-panel/master/public/screenshotimg.png)
+![My Project Screenshot](https://raw.githubusercontent.com/ihorchciv/react-admin-panel/master/public/screenshotimg.png)
 
 <!-- GETTING STARTED -->
 
