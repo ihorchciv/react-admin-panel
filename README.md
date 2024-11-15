@@ -11,6 +11,8 @@
     <br />
     <br />
 
+    ![My Project Screenshot](public/screenshotimg.png)
+
 <!-- GETTING STARTED -->
 
 ## Getting Started
