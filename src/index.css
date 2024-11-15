@@ -69,3 +69,8 @@ td button {
   color: #0b6bcb;
   text-decoration: none;
 }
+
+.btns-group button {
+  width: 50px;
+  margin: 5px;
+}
