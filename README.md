@@ -11,7 +11,7 @@
     <br />
     <br />
 
-    ![My Project Screenshot](public/screenshotimg.png)
+    ![My Project Screenshot](https://raw.githubusercontent.com/ihorchciv/react-admin-panel/master/public/screenshotimg.png)
 
 <!-- GETTING STARTED -->
 
