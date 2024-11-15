@@ -94,7 +94,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 Ihor Chernyakhovskyy - ihorchciv@gmail.com
 
-LinkedIn: [www.linkedin.com/in/ihor-chernyakhovskyy-9659b525a](www.linkedin.com/in/ihor-chernyakhovskyy-9659b525a)
+LinkedIn: [Ihor Chernyakhovskyy](https://www.linkedin.com/in/ihor-chernyakhovskyy-9659b525a)
 
 Project Link: [https://github.com/ihorchciv/react-admin-panel.git](https://github.com/ihorchciv/react-admin-panel.git)
 
