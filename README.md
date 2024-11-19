@@ -68,7 +68,7 @@ _To set up this project, follow this short step-by-step guide._
 ## Roadmap
 
 - [x] Add a log-out functionality
-- [ ] Sync with local storage
+- [x] Sync with local storage
 - [ ] Perform form data validation when creating a new user
 - [ ] Create a search field and filter the array of users by name accordingly
 - [ ] Add a more user-friendly dark mode
