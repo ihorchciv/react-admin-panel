@@ -1,22 +1,31 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Users.css";
 import Button from "@mui/joy/Button";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectAllUsers } from "../../../store/userSlice";
 import { useState } from "react";
 import RemoveUserModal from "../../../components/RemoveUserModal/RemoveUserModal";
 import { CreateUserModal } from "../../../components/CreateUserModal/CreateUserModal";
+import { logOut } from "../../../store/auchSlice";
 
 const Users = () => {
   const data = useSelector(selectAllUsers);
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenCreateUserModal, setIsOpenCreateUserModal] = useState(false);
   const [userId, setUserId] = useState("");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const onDeleteUser = (id) => {
     setIsOpen(true);
     setUserId(id);
   };
+
+  const handleLogout = () => {
+    dispatch(logOut());
+    navigate("/");
+  };
+
   return (
     <div className="container">
       <table>
@@ -59,9 +68,7 @@ const Users = () => {
         <button onClick={() => setIsOpenCreateUserModal(true)}>
           Create a new User
         </button>
-        <button>
-          <Link to={"/"}>Exit</Link>
-        </button>
+        <button onClick={handleLogout}>Exit</button>
       </div>
       {isOpen && <RemoveUserModal setIsOpen={setIsOpen} userId={userId} />}
       {isOpenCreateUserModal && (
