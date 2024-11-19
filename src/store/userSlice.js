@@ -1,56 +1,39 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuidv4 } from "uuid";
+import { getFromLocalStorage, saveToLocalStorage } from "./localStorage";
 
 export const userSlice = createSlice({
   name: "users",
   initialState: {
-    data: [
+    data: getFromLocalStorage("users") || [
       {
-        id: "1",
-        name: "John",
-        password: "12345",
-        email: "john@mail.com",
-      },
-      {
-        id: "2",
-        name: "Jack",
-        password: "67890",
-        email: "jack@mail.com",
-      },
-      {
-        id: "3",
-        name: "Simon",
-        password: "346712345",
-        email: "simon@mail.com",
-      },
-      {
-        id: "4",
-        name: "Limon",
-        password: "345gwer5",
-        email: "limonimo@mail.com",
-      },
-      {
-        id: "5",
         name: "1",
         password: "1",
         email: "1",
+        id: "1",
       },
     ],
   },
   reducers: {
     removeUser: (state, action) => {
       state.data.splice(action.payload, 1);
+      saveToLocalStorage("users", state.data);
     },
 
     editUser: (state, action) => {
       let currentUserIdx = state.data.findIndex(
         (user) => user.id === action.payload.id
       );
-      state.data[currentUserIdx] = action.payload;
+      if (currentUserIdx !== -1) {
+        state.data[currentUserIdx] = action.payload;
+        saveToLocalStorage("users", state.data);
+      }
     },
 
     addUser: (state, action) => {
-      state.data.push({ ...action.payload, id: uuidv4() });
+      const newUser = { ...action.payload, id: uuidv4() };
+      state.data.push(newUser);
+      saveToLocalStorage("users", state.data);
     },
   },
 });
