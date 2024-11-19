@@ -19,7 +19,9 @@ export function Form() {
   const onLogin = () => {
     let currentUser = users.find(
       (obj) =>
-        obj.name === user.name && obj.password === user.password && obj.email
+        obj.name === user.name &&
+        obj.password === user.password &&
+        obj.email === user.email
     );
     if (currentUser) {
       dispatch(logIn(user));
