@@ -7,12 +7,14 @@ import { useState } from "react";
 import RemoveUserModal from "../../../components/RemoveUserModal/RemoveUserModal";
 import { CreateUserModal } from "../../../components/CreateUserModal/CreateUserModal";
 import { logOut } from "../../../store/auchSlice";
+import Input from "@mui/joy/Input";
 
 const Users = () => {
   const data = useSelector(selectAllUsers);
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenCreateUserModal, setIsOpenCreateUserModal] = useState(false);
   const [userId, setUserId] = useState("");
+  const [value, setValue] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -25,6 +27,14 @@ const Users = () => {
     dispatch(logOut());
     navigate("/");
   };
+
+  const handleChange = (e) => {
+    setValue(e.target.value.toLowerCase());
+  };
+
+  const filteredUsers = data.filter((user) =>
+    user.name.toLowerCase().includes(value)
+  );
 
   return (
     <div className="container">
@@ -40,7 +50,7 @@ const Users = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map((obj) => (
+          {filteredUsers.map((obj) => (
             <tr key={obj.id}>
               <td>{obj.id[0]}...</td>
               <td>{obj.name}</td>
@@ -64,6 +74,14 @@ const Users = () => {
           ))}
         </tbody>
       </table>
+      <div className="searchContainer">
+        <Input
+          type="text"
+          value={value}
+          onChange={handleChange}
+          placeholder="find a user..."
+        />
+      </div>
       <div className="nav-block">
         <button onClick={() => setIsOpenCreateUserModal(true)}>
           Create a new User
